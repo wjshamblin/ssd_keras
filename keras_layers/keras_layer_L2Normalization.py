@@ -45,6 +45,7 @@ class L2Normalization(Layer):
 
     def __init__(self, gamma_init=20, **kwargs):
         if K.image_data_format() == 'channel_last':
+            print(self.axis)
             self.axis = 3
         else:
             self.axis = 1
